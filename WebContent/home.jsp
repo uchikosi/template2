@@ -28,12 +28,13 @@
     table {
       text-align: center;
       margin: 0 auto;
-      border: 1px solid #333;
+
     }
 
     #top {
       width: 780px;
       margin: 30px auto;
+      border: 1px solid #333;
     }
 
     #header {
