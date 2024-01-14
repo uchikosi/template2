@@ -63,7 +63,7 @@
 						<span>商品名</span>
 					</td>
 					<td>
-						<s:property value="session.buyItem_price" />
+						<s:property value="session.buyItem_name" />
 					</td>
 				</tr>
 				<tr>
