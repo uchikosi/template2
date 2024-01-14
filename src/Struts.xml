@@ -5,6 +5,7 @@
   <constant name="struts.devMode" value="true" />
   <!-- 対象のpackageを設定-->
   <package name="com.diworksdev.template.action" extends="struts-default">
+
     <!-- HomeAction -->
     <action name="HomeAction" class="com.diworksdev.template.action.HomeAction" method="execute">
       <result name="success">login.jsp</result>
@@ -30,6 +31,11 @@
     <!-- UserCreateCompleteAction -->
     <action name="UserCreateCompleteAction" class="com.diworksdev.template.action.UserCreateCompleteAction" method="execute">
       <result name="success">userCreateComplete.jsp</result>
+    </action>
+
+    <!-- BuyItemAction -->
+    <action name="BuyItemAction" class="com.diworksdev.template.action.BuyItemAction" method="execute">
+      <result name="success">buyItemConfirm.jsp</result>
     </action>
 
 
