@@ -36,9 +36,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	}
 	public void delete() throws SQLException {
 		MyPageDAO myPageDAO = new MyPageDAO();
-
+//		id および login_user_id を取得し、文字列に変換、item_transaction_id および user_master_id として変数に代入
 		String item_transaction_id = session.get("id").toString();
 		String user_master_id = session.get("login_user_id").toString();
+//		myPageDAO インスタンスの buyItemHistoryDelete メソッドを呼び出し、商品の購入履歴を削除します。
+//		指定された item_transaction_id および user_master_id に一致する行を user_buy_item_transaction テーブルから削除
 		int res = myPageDAO.buyItemHistoryDelete(item_transaction_id,user_master_id);
 
 		if(res > 0) {

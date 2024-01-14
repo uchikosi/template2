@@ -35,18 +35,24 @@ public class MyPageDAO {
 	}
 	public int buyItemHistoryDelete(String item_transaction_id, String user_master_id) throws SQLException {
 	    DBConnector dbConnector = new DBConnector();
+//	    dbConnector.getConnection() を呼び出して、データベースへの接続 connection を取得します
 	    Connection connection = dbConnector.getConnection();
+//	    削除操作を行うSQL文  user_buy_item_transaction テーブルから指定された条件でデータを削除する
+//	    テーブル内の item_transaction_id  user_master_id  カラムが、指定された値と一致する行を削除対象とします。? はプレースホルダで、実際の値は実行時に設定されます。
 	    String sql = "DELETE FROM user_buy_item_transaction WHERE item_transaction_id = ? AND user_master_id = ?";
+//	    PreparedStatement オブジェクト preparedStatement を生成します。これは SQL 文を実行する準備が整った状態
 	    PreparedStatement preparedStatement;
 	    int result = 0;
 	    try {
 	        preparedStatement = connection.prepareStatement(sql);
-	        preparedStatement.setString(1, item_transaction_id);
-	        preparedStatement.setString(2, user_master_id);
+	        preparedStatement.setString(1,item_transaction_id);
+	        preparedStatement.setString(2,user_master_id);
 	        result = preparedStatement.executeUpdate();
 	    } catch (SQLException e) {
+//	    	エラー内容を標準エラー出力
 	        e.printStackTrace();
 	    } finally {
+//	    	データベースへの接続をクローズします。
 	        connection.close();
 	    }
 	    return result;
