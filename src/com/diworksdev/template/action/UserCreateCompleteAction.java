@@ -21,17 +21,17 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 		return result ;
 	}
 	public String getLoginUserId() {
-	return loginUserId;
+		return loginUserId;
 	}
 	public void setLoginUserId(String loginUserId) {
-	this.loginUserId = loginUserId;
+		this.loginUserId = loginUserId;
 	}
 	public String getLoginPassword() {
-	return loginPassword;
+		return loginPassword;
 	}
 	public void setLoginPassword(String loginPassword)
 	{
-	this.loginPassword = loginPassword;
+		this.loginPassword = loginPassword;
 	}
 	public String getUserName() {
 		return userName;

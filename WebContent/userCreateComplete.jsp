@@ -61,6 +61,10 @@
 			<div>
 				<a href='<s:url action="HomeAction" />'>ログインへ</a>
 			</div>
+			<div>
+				<span>前 画 面 に 戻 る 場 合 は </span>
+				<a href='<s:url action="HomeAction" />'>こ ち ら</a>
+			</div>
 		</div>
 		<div id="footer">
 			<div id="pr">
