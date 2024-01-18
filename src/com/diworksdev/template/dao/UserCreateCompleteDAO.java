@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import com.diworksdev.template.util.DBConnector;
 import com.diworksdev.template.util.DateUtil;
-// 上手くいかなかったのでテキストと違うようになってる
 
 public class UserCreateCompleteDAO {
 	private DateUtil dateUtil = new DateUtil();
