@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- Struts フレームワークで提供されるカスタムタグを JSP ページで利用できるようにします。 -->
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,10 +62,6 @@
 			<h3>ユーザーの登録が完了しました。</h3>
 			<div>
 				<a href='<s:url action="HomeAction" />'>ログインへ</a>
-			</div>
-			<div>
-				<span>前 画 面 に 戻 る 場 合 は </span>
-				<a href='<s:url action="HomeAction" />'>こ ち ら</a>
 			</div>
 		</div>
 		<div id="footer">

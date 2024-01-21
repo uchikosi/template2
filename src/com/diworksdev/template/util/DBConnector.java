@@ -8,7 +8,6 @@ import java.sql.SQLException;
  * DBConnectorクラスは、データベースへの接続を管理するためのユーティリティクラスです。
  */
 public class DBConnector {
-
     // JDBCドライバのクラス名
     private static String driverName = "com.mysql.jdbc.Driver";
 
